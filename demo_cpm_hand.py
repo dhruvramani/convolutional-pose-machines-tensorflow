@@ -42,7 +42,7 @@ tf.app.flags.DEFINE_integer('cam_num',
                             default_value=0,
                             docstring='Webcam device number')
 tf.app.flags.DEFINE_bool('KALMAN_ON',
-                         default_value=True,
+                         default_value=False,
                          docstring='enalbe kalman filter')
 tf.app.flags.DEFINE_float('kalman_noise',
                             default_value=3e-2,
@@ -177,6 +177,7 @@ def main(argv):
                                                                         'center_map:0': test_center_map})
 
                 # Show visualized image
+                print(predict_heatmap)
                 demo_img = visualize_result(test_img, FLAGS, stage_heatmap_np, kalman_filter_array)
                 cv2.imshow('demo_img', demo_img.astype(np.uint8))
                 if cv2.waitKey(0) == ord('q'): break
