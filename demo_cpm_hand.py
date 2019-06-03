@@ -14,7 +14,7 @@ import sys
 """
 FLAGS = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_string('DEMO_TYPE',
-                           default_value='test_imgs/longhand.jpg',
+                           default_value='test_imgs/hand.jpg',
                            # default_value='SINGLE',
                            docstring='MULTI: show multiple stage,'
                                      'SINGLE: only last stage,'
