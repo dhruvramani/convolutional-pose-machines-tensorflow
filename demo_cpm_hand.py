@@ -179,8 +179,8 @@ def main(argv):
                                                                         'center_map:0': test_center_map})
 
                 # Show visualized image
-                print(len(stage_heatmap_np), stage_heatmap_np[0])
-                print(len(kalman_filter_array))
+                print(len(stage_heatmap_np), stage_heatmap_np[0].shape)
+                print(len(kalman_filter_array), kalman_filter_array[0])
                 #img = plt.imshow(predict_heatmap)
                 #plt.savefig('./heatmap.png')
                 demo_img = visualize_result(test_img, FLAGS, stage_heatmap_np, kalman_filter_array)
