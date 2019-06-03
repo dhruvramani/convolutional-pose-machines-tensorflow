@@ -179,9 +179,10 @@ def main(argv):
                                                                         'center_map:0': test_center_map})
 
                 # Show visualized image
-                print(predict_heatmap.shape)
-                img = plt.imshow(predict_heatmap)
-                plt.savefig('./heatmap.png')
+                print(stage_heatmap_np.shape)
+                print(kalman_filter_array)
+                #img = plt.imshow(predict_heatmap)
+                #plt.savefig('./heatmap.png')
                 demo_img = visualize_result(test_img, FLAGS, stage_heatmap_np, kalman_filter_array)
                 cv2.imshow('demo_img', demo_img.astype(np.uint8))
                 if cv2.waitKey(0) == ord('q'): break
